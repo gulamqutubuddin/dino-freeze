@@ -11,7 +11,7 @@ Game me ek unified abstraction layer hai (`src/ads/AdService.js` aur `src/ads/ad
 | Platform | Ad Provider | Ad Types |
 | :--- | :--- | :--- |
 | **Android / iOS App (Capacitor)** | **Google AdMob** (`@capacitor-community/admob`) | 📌 Adaptive Banner, 🎬 Interstitial, 🎁 Rewarded Video |
-| **Web Browser (Netlify / itch.io)** | **Google H5 Games Ads** (AdSense for Games) | 🎬 Natural break ads, 🎁 Rewarded |
+| **Web Browser (Vercel / Netlify / itch.io)** | **Google H5 Games Ads** (AdSense for Games) | 🎬 Natural break ads, 🎁 Rewarded |
 | **Local Dev / Testing** | **Simulated Mock Ad** | 📺 5s interactive test modal with skip/reward |
 
 > **Zaroori Baat**: Google AdMob official tor par native Android/iOS mobile apps ke liye hota hai. Web browsers me Google AdSense / H5 Games Ads chalta hai. Humne **Capacitor** include kar diya hai jisse ye game 1 click me Android app ban jata hai aur usme asli AdMob SDK load hota hai!
