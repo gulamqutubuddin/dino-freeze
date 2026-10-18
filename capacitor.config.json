@@ -1,0 +1,13 @@
+{
+  "appId": "com.yourstudio.dinofreezeblast",
+  "appName": "Dino Freeze Blast",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

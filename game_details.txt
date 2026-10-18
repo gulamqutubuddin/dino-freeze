@@ -1,0 +1,1391 @@
+# MASTER PROMPT — PREMIUM KIDS ARCADE GAME
+
+## ROLE
+
+Act as a **senior HTML5/Web Game Developer, Game Designer, UI/UX Designer, 2D/2.5D Game Artist and JavaScript/React Engineer**.
+
+Build a **high-quality, polished, commercial-looking kids arcade game** inspired by the feel and excitement of modern **Timezone-style arcade shooting games**, but with completely original characters, artwork, UI, animations and game mechanics.
+
+The game should feel like a **real arcade game**, not like a basic HTML/Canvas demo.
+
+The target audience is **children approximately 6–12 years old**, so the game must be:
+
+- Colorful
+- Cute
+- Exciting
+- Easy to understand
+- Non-scary
+- Non-violent
+- Rewarding
+- Highly interactive
+- Visually impressive
+- Optimized for smooth gameplay
+
+---
+
+# 1. GAME CONCEPT
+
+Create a **2D/2.5D "Dino & Dragon Ice Blast" arcade shooter**.
+
+The player controls a futuristic **Water/Ice Cannon** positioned near the bottom of the screen.
+
+Cute dinosaurs and flying dragons enter the arena.
+
+The player aims the cannon using the mouse or touchscreen and shoots streams of magical water/ice energy.
+
+Instead of killing enemies:
+
+**Water → Freeze → Full Freeze → Ice Transformation → Shatter → Rewards**
+
+This must be the central gameplay loop.
+
+The overall experience should feel like:
+
+> "A colorful children's arcade attraction where the player freezes cute dinosaurs and dragons with magical ice water."
+
+---
+
+# 2. IMPORTANT — TECHNOLOGY / ARCHITECTURE
+
+Do NOT force the entire project into one HTML file if doing so would reduce the visual quality, performance or maintainability.
+
+You may choose the best architecture from:
+
+### Preferred
+- React
+- Vite
+- JavaScript or TypeScript
+- HTML5 Canvas
+- SVG
+- CSS
+- Web Audio API
+
+### Optional
+- PixiJS
+- Phaser
+- Three.js/WebGL
+- Other lightweight browser-compatible game libraries
+
+Use libraries/frameworks only when they genuinely improve:
+
+- Rendering
+- Animation
+- Particle effects
+- Performance
+- Touch controls
+- Game-state management
+
+Do NOT unnecessarily over-engineer the game.
+
+---
+
+# 3. NETLIFY DEPLOYMENT — CRITICAL
+
+The final project MUST be deployable on **Netlify**.
+
+Provide:
+
+- Complete source code
+- package.json
+- Vite configuration if required
+- src folder
+- public/assets folder if required
+- README.md
+- Production build configuration
+
+The project must work with:
+
+```text
+npm install
+npm run build
+```
+
+and generate a standard:
+
+```text
+dist/
+```
+
+folder that can be deployed directly to Netlify.
+
+Also provide a **Netlify configuration** if necessary.
+
+For example:
+
+```text
+netlify.toml
+```
+
+with the correct build command and publish directory.
+
+### IMPORTANT
+
+The game must NOT depend on:
+
+- Backend servers
+- Databases
+- User accounts
+- Login
+- Paid APIs
+- External game servers
+
+The game should run entirely in the browser.
+
+---
+
+# 4. SINGLE HTML FALLBACK
+
+If the game can be implemented without compromising quality, also provide a standalone version:
+
+```text
+index.html
+```
+
+containing the complete game.
+
+However:
+
+**Do NOT sacrifice game quality merely to satisfy the single-file requirement.**
+
+If React/Canvas/WebGL produces a significantly better result, use the multi-file React architecture.
+
+---
+
+# 5. VISUAL QUALITY — VERY IMPORTANT
+
+The game must NOT look like a programming prototype.
+
+Avoid:
+
+- Plain geometric rectangles
+- Boring circles as enemies
+- Basic text-only UI
+- Generic default fonts
+- Static backgrounds
+- Flat colors everywhere
+- Placeholder graphics
+- Simple emoji-only graphics
+
+Instead create a polished **cartoon arcade aesthetic**.
+
+Visual direction:
+
+- Bright colors
+- Cute dinosaurs
+- Friendly dragons
+- Soft rounded shapes
+- Glossy materials
+- Ice crystals
+- Magical water
+- Colorful particle effects
+- Cartoon explosions
+- Dynamic lighting
+- Glow effects
+- Parallax backgrounds
+- Smooth animations
+- Screen shake
+- Floating score numbers
+- Animated UI
+- Large arcade-style buttons
+
+The visual quality should resemble a **premium children's mobile/arcade game**.
+
+---
+
+# 6. GAME CAMERA
+
+Use a dynamic:
+
+### 2D / 2.5D arcade perspective
+
+The battlefield should have depth.
+
+Use:
+
+- Foreground
+- Midground
+- Background
+- Parallax movement
+- Perspective scaling
+- Shadows
+- Atmospheric effects
+
+Enemies farther away should appear smaller.
+
+Enemies approaching the player should gradually become larger.
+
+This should create the feeling of moving through a real arcade arena.
+
+---
+
+# 7. WORLD / LEVEL DESIGN
+
+Create multiple themed environments.
+
+At minimum:
+
+### Level 1 — Dino Valley
+Green jungle environment.
+
+### Level 2 — Frozen Mountain
+Snow, ice, glaciers and falling snow.
+
+### Level 3 — Dragon Kingdom
+Magical sky/castle environment.
+
+### Level 4 — Lava Island
+Cartoon lava environment, but NOT scary.
+
+### Level 5 — Crystal Cave
+Glowing crystals and magical effects.
+
+Each level should have:
+
+- Unique background
+- Unique music
+- Unique enemy variations
+- Different environmental effects
+- Increasing difficulty
+- Different visual atmosphere
+
+---
+
+# 8. ENEMIES
+
+Create multiple enemy types.
+
+## Dinosaurs
+
+Examples:
+
+- Baby Raptor
+- Speedy Raptor
+- Triceratops
+- Stegosaurus
+- Ankylosaurus
+- T-Rex
+- Mega Dino
+
+## Dragons
+
+Examples:
+
+- Baby Dragon
+- Flying Dragon
+- Ice Dragon
+- Rainbow Dragon
+- Fire Dragon
+- Crystal Dragon
+- Boss Dragon
+
+All enemies should be:
+
+- Cute
+- Cartoon-style
+- Expressive
+- Friendly-looking
+
+Do NOT make them frightening or realistic.
+
+---
+
+# 9. ENEMY BEHAVIOUR
+
+Enemies should not simply move in a straight line.
+
+Implement different movement patterns.
+
+Examples:
+
+### Walking
+Enemy walks toward the player.
+
+### Zig-Zag
+Enemy moves left and right.
+
+### Jumping
+Enemy periodically jumps.
+
+### Dodging
+Enemy tries to avoid incoming shots.
+
+### Flying
+Dragons move vertically and horizontally.
+
+### Diving
+Flying dragons briefly dive toward the cannon and then fly away.
+
+### Swarming
+Several small enemies move together.
+
+### Boss Movement
+Bosses should have multiple movement phases.
+
+---
+
+# 10. WATER / ICE CANNON
+
+The player controls a large, visually impressive cannon.
+
+The cannon should:
+
+- Rotate toward mouse/touch
+- Have smooth aiming
+- Have recoil
+- Glow while firing
+- Emit water particles
+- Emit ice particles
+- Have animated tubes/nozzles
+- Have muzzle glow
+- Have shooting sound
+
+The cannon should remain visible at the bottom of the screen.
+
+Do NOT allow the cannon to disappear when firing or drawing/aiming.
+
+---
+
+# 11. AIMING SYSTEM
+
+Desktop:
+
+- Mouse controls aiming.
+- Mouse click/hold fires.
+
+Mobile/tablet:
+
+- Touch controls aiming.
+- Touch and hold fires.
+
+The aiming system must be extremely responsive.
+
+Add:
+
+- Aim indicator
+- Target direction
+- Optional laser/water trajectory preview
+- Reticle/crosshair
+- Hit feedback
+
+---
+
+# 12. WATER PROJECTILES
+
+The weapon fires a continuous stream of magical water/ice energy.
+
+Create visually rich projectiles using:
+
+- Particle systems
+- Blue glow
+- Water droplets
+- Small bubbles
+- Ice crystals
+- Motion trails
+- Impact splashes
+
+When a projectile hits an enemy:
+
+Create:
+
+- Water splash
+- Small particles
+- Hit flash
+- Sound
+- Freeze-meter increase
+
+---
+
+# 13. CRUCIAL FREEZE MECHANIC
+
+This is the heart of the game.
+
+Every enemy has a hidden/visible:
+
+### FREEZE METER
+
+Example:
+
+```text
+❄ FREEZE  ███████░░░ 70%
+```
+
+When the enemy is repeatedly hit:
+
+### Stage 1 — Normal
+
+Enemy has normal colors.
+
+### Stage 2 — Chilled
+
+Small ice crystals begin appearing.
+
+### Stage 3 — Frozen
+
+Body becomes increasingly blue/icy.
+
+### Stage 4 — 100% Frozen
+
+Enemy becomes a beautiful translucent ice statue.
+
+Add:
+
+- Frost texture
+- Ice crystals
+- Blue glow
+- Frozen particles
+- Ice reflection
+- Frozen sound
+
+### Stage 5 — SHATTER
+
+After a short delay:
+
+**CRAAACK!**
+
+The enemy dramatically shatters into:
+
+- Ice cubes
+- Crystal fragments
+- Snow particles
+- Sparkles
+- Magical particles
+
+Show a large floating score:
+
+```text
++100
++250
++500
+PERFECT FREEZE!
+```
+
+---
+
+# 14. COMBO SYSTEM
+
+Implement a combo mechanic.
+
+Example:
+
+```text
+COMBO x3
+COMBO x5
+COMBO x10
+SUPER COMBO!
+```
+
+Freezing enemies consecutively without missing should increase the multiplier.
+
+Example:
+
+```text
+1 enemy  → x1
+3 enemies → x2
+5 enemies → x3
+10 enemies → x5
+```
+
+Add increasingly impressive visual effects.
+
+---
+
+# 15. SUPER FREEZE BLAST
+
+Add a special ability:
+
+# ❄ SUPER FREEZE BLAST ❄
+
+The player earns energy while freezing enemies.
+
+Display a large charging meter:
+
+```text
+SUPER FREEZE
+██████████░░ 82%
+```
+
+When fully charged:
+
+The button becomes animated.
+
+Pressing it should:
+
+1. Slow down the game
+2. Create a large magical shockwave
+3. Freeze every enemy
+4. Turn them into ice statues
+5. Pause briefly
+6. Shatter all enemies simultaneously
+7. Award huge combo points
+
+Example:
+
+```text
+SUPER FREEZE!
++2500
++1800
++1200
++500
+```
+
+Add:
+
+- Screen flash
+- Camera shake
+- Slow motion
+- Particles
+- Ice wave
+- Sound effect
+
+This should feel like a major arcade moment.
+
+---
+
+# 16. BOSS BATTLES
+
+Every few waves introduce a boss.
+
+Example:
+
+## MEGA ICE DRAGON
+
+The boss should have:
+
+- Large animated character
+- Large health/freeze meter
+- Multiple phases
+- Special movements
+- Minion spawning
+- Attack patterns
+- Weak points
+- Multiple freeze stages
+
+Boss should NOT attack violently.
+
+Instead:
+
+- Roars playfully
+- Blows cartoon wind
+- Throws snowballs
+- Creates harmless obstacles
+- Flies around
+
+The objective is to freeze the boss.
+
+When defeated:
+
+Create a spectacular:
+
+# MEGA ICE SHATTER
+
+animation.
+
+---
+
+# 17. POWER-UPS
+
+Add collectible power-ups.
+
+Examples:
+
+### ❄ Mega Freeze
+Instantly adds freeze percentage.
+
+### 💧 Water Storm
+Massive water stream.
+
+### ⚡ Rapid Freeze
+Faster projectile rate.
+
+### 🛡 Shield
+Protects the player.
+
+### ⭐ Score Multiplier
+2x score for limited time.
+
+### 💎 Crystal Bonus
+Extra points.
+
+### ❄ Ice Bomb
+Freezes multiple nearby enemies.
+
+Power-ups should visually float, rotate and glow.
+
+---
+
+# 18. PLAYER SHIELD / HEALTH
+
+The player has a shield.
+
+Display:
+
+```text
+🛡 SHIELD
+████████░░
+```
+
+If an enemy reaches the bottom:
+
+DO NOT show injury, blood or violence.
+
+Instead:
+
+- Enemy playfully bumps the cannon
+- Cannon shakes
+- Funny sound plays
+- Shield decreases
+- Enemy runs/flys away
+
+If shield reaches zero:
+
+Show:
+
+# OH NO! TRY AGAIN!
+
+with a friendly animation.
+
+---
+
+# 19. SCORE SYSTEM
+
+Implement a proper arcade scoring system.
+
+Scoring examples:
+
+```text
+Hit Enemy        +10
+Freeze 25%       +25
+Freeze 50%       +50
+Perfect Freeze   +100
+Shatter          +150
+Combo Bonus      +200
+Boss Defeat      +1000
+```
+
+Show animated score popups.
+
+Use different animations for:
+
+- Normal score
+- Combo score
+- Perfect Freeze
+- Boss bonus
+
+---
+
+# 20. MISS / ACCURACY SYSTEM
+
+Add optional accuracy tracking.
+
+Example:
+
+```text
+ACCURACY
+92%
+```
+
+At the end of a level show:
+
+```text
+FREEZES        37
+SHATTERS       35
+ACCURACY       92%
+MAX COMBO      x8
+SCORE          12,850
+```
+
+---
+
+# 21. WAVE SYSTEM
+
+Create progressive waves.
+
+Example:
+
+```text
+WAVE 01
+WAVE 02
+WAVE 03
+BOSS WAVE
+WAVE 05
+...
+```
+
+Each wave becomes progressively harder.
+
+Increase:
+
+- Enemy count
+- Enemy speed
+- Movement complexity
+- Spawn frequency
+- Boss frequency
+
+But maintain a **kid-friendly difficulty curve**.
+
+---
+
+# 22. ARCADE HUD
+
+Create a professional arcade HUD.
+
+Top-left:
+
+```text
+PLAYER 1
+SCORE
+12,850
+```
+
+Top-center:
+
+```text
+WAVE 05
+```
+
+Top-right:
+
+```text
+🛡 SHIELD
+❄ SUPER FREEZE
+```
+
+Bottom:
+
+- Cannon
+- Power-up controls
+- Combo indicator
+
+The UI should be:
+
+- Large
+- Readable
+- Colorful
+- Animated
+- Touch friendly
+
+---
+
+# 23. MENU SYSTEM
+
+Create a complete game menu.
+
+### Main Menu
+
+Buttons:
+
+```text
+🎮 PLAY
+🦖 DINO WORLD
+🐉 DRAGON WORLD
+🏆 HIGH SCORES
+⚙ SETTINGS
+```
+
+Add animated background characters.
+
+---
+
+# 24. LEVEL SELECT
+
+Create an attractive level-selection screen.
+
+Each level should be represented by a large animated card.
+
+Example:
+
+```text
+🌴 DINO VALLEY
+⭐⭐⭐
+
+❄ FROZEN MOUNTAIN
+⭐⭐
+
+🐉 DRAGON KINGDOM
+🔒
+```
+
+Use unlock progression.
+
+---
+
+# 25. CHARACTER SELECTION
+
+Optional but preferred.
+
+Allow the player to select different cannons.
+
+Examples:
+
+- Water Cannon
+- Ice Cannon
+- Rainbow Cannon
+- Crystal Cannon
+- Dragon Cannon
+
+Each cannon can have:
+
+- Different visual design
+- Different particle effect
+- Different sound
+- Cosmetic upgrades
+
+Do NOT make purchases with real money.
+
+Everything should be earned through gameplay.
+
+---
+
+# 26. CURRENCY / REWARD SYSTEM
+
+Introduce an in-game currency:
+
+```text
+💎 CRYSTALS
+```
+
+Players earn crystals by:
+
+- Freezing enemies
+- Completing waves
+- Boss victories
+- Combos
+- Daily-style challenges
+
+Use crystals for cosmetic upgrades.
+
+Example:
+
+```text
+CANNON
+Level 1
+Level 2
+Level 3
+```
+
+Avoid gambling mechanics or loot boxes.
+
+---
+
+# 27. MISSIONS / ACHIEVEMENTS
+
+Add simple kid-friendly achievements.
+
+Examples:
+
+```text
+❄ Freeze 50 Dinosaurs
+🐉 Freeze 20 Dragons
+🔥 Reach Combo x10
+🏆 Defeat 3 Bosses
+💎 Collect 500 Crystals
+```
+
+Reward the player with stars/crystals.
+
+---
+
+# 28. SOUND DESIGN
+
+Use the Web Audio API or local audio assets.
+
+Create high-quality arcade-style sounds for:
+
+- Cannon firing
+- Water splash
+- Freeze
+- Ice cracking
+- Ice shattering
+- Combo
+- Power-up
+- Boss appearance
+- Boss defeat
+- Button click
+- Level complete
+- Score popup
+
+Avoid annoying repetitive sounds.
+
+Add background music appropriate for children.
+
+Provide:
+
+```text
+Music ON/OFF
+Sound ON/OFF
+```
+
+---
+
+# 29. VISUAL EFFECTS
+
+Use a professional particle system.
+
+Implement:
+
+- Water droplets
+- Ice shards
+- Snow
+- Sparkles
+- Glow
+- Smoke
+- Dust
+- Magic particles
+- Screen flash
+- Camera shake
+- Motion trails
+- Hit effects
+- Shockwaves
+- Frozen aura
+
+Use object pooling where appropriate for performance.
+
+---
+
+# 30. ANIMATION
+
+All major objects should be animated.
+
+Characters should have:
+
+- Idle animation
+- Walk animation
+- Run animation
+- Hit reaction
+- Freeze animation
+- Frozen idle
+- Shatter animation
+- Celebration animation
+
+Avoid static sprites whenever possible.
+
+---
+
+# 31. RESPONSIVE DESIGN
+
+The game must work on:
+
+### Desktop
+- Mouse
+- Keyboard
+
+### Laptop
+- Mouse
+- Trackpad
+
+### Tablet
+- Touch
+
+### Mobile
+- Touch
+
+Use responsive scaling.
+
+The game should adapt to:
+
+- Landscape
+- Different screen sizes
+- Different aspect ratios
+
+Prefer landscape orientation for gameplay.
+
+---
+
+# 32. MOBILE CONTROLS
+
+On mobile:
+
+- Touch = aim
+- Hold = shoot
+- Special button = Super Freeze
+- Pause button = pause
+
+Controls must be large enough for children's fingers.
+
+Prevent accidental browser scrolling/zooming while playing.
+
+---
+
+# 33. KEYBOARD CONTROLS
+
+Desktop keyboard:
+
+```text
+Mouse        Aim
+Left Click   Shoot
+Space        Super Freeze
+P            Pause
+M            Mute
+Esc          Pause/Menu
+```
+
+Show controls on the first launch.
+
+---
+
+# 34. PAUSE SCREEN
+
+Pause menu:
+
+```text
+PAUSED
+
+▶ RESUME
+🔊 SOUND
+🎵 MUSIC
+🔄 RESTART
+🏠 MAIN MENU
+```
+
+---
+
+# 35. GAME OVER / LEVEL COMPLETE
+
+After completing a level:
+
+Show a highly animated results screen.
+
+Example:
+
+```text
+🎉 LEVEL COMPLETE! 🎉
+
+SCORE       18,450
+COMBO       x12
+ACCURACY    94%
+FROZEN      47
+SHATTERED   43
+
+⭐⭐⭐
+
++250 💎
+
+CONTINUE
+```
+
+Add celebratory particle effects.
+
+---
+
+# 36. GAME FEEL
+
+This is extremely important.
+
+The game should have strong:
+
+### Game Feel / Juice
+
+Every action should feel rewarding.
+
+When shooting:
+
+- recoil
+- particles
+- sound
+- glow
+
+When hitting:
+
+- impact flash
+- splash
+- sound
+
+When freezing:
+
+- progressive visual transformation
+- ice crystals
+- freeze sound
+
+When shattering:
+
+- screen shake
+- slow motion
+- particles
+- sound
+- score popup
+
+The player should constantly receive visual/audio feedback.
+
+---
+
+# 37. PERFORMANCE
+
+Target:
+
+### 60 FPS
+
+Optimize for:
+
+- Mobile browsers
+- Desktop Chrome
+- Edge
+- Safari
+- Firefox
+
+Use:
+
+- requestAnimationFrame
+- object pooling
+- efficient collision detection
+- sprite/texture reuse
+- limited DOM manipulation
+- Canvas/WebGL rendering where appropriate
+
+Avoid unnecessary React re-renders during the gameplay loop.
+
+React should manage:
+
+- Menus
+- Settings
+- HUD state
+- Game screens
+
+Canvas/WebGL should manage:
+
+- Real-time gameplay
+- Characters
+- Projectiles
+- Particles
+- Animations
+
+---
+
+# 38. NO PLACEHOLDER IMPLEMENTATION
+
+Do NOT provide:
+
+```text
+TODO
+Coming Soon
+Placeholder
+Replace with image
+Add later
+Example enemy
+Dummy graphics
+```
+
+Every core feature must actually work.
+
+If professional external artwork cannot be generated, create original procedural/vector/SVG artwork rather than leaving placeholders.
+
+---
+
+# 39. ORIGINALITY / COPYRIGHT
+
+Do NOT copy:
+
+- Timezone characters
+- Timezone logos
+- Existing arcade game artwork
+- Existing copyrighted sprites
+- Existing game sounds
+- Existing game UI
+
+The game may be **inspired by the arcade experience**, but all assets and branding must be original.
+
+Game title should also be original.
+
+Suggested title:
+
+# ❄️ DINO FREEZE BLAST 🦖
+
+or create another original title.
+
+---
+
+# 40. SAVE SYSTEM
+
+Use browser:
+
+```text
+localStorage
+```
+
+to save:
+
+- High score
+- Unlocked levels
+- Crystals
+- Cannon upgrades
+- Achievements
+- Settings
+
+No account required.
+
+No cloud database required.
+
+---
+
+# 41. ACCESSIBILITY
+
+Include:
+
+- Large buttons
+- High contrast
+- Clear icons
+- Readable fonts
+- Reduced motion option
+- Sound toggle
+- Music toggle
+
+The game should remain playable even with sound disabled.
+
+---
+
+# 42. ERROR HANDLING
+
+The game should gracefully handle:
+
+- Unsupported Web Audio
+- Small screen
+- Orientation changes
+- Browser resize
+- Lost focus
+- Touch interruptions
+- Low-performance devices
+
+Pause the game when the browser tab becomes inactive.
+
+---
+
+# 43. GAME STRUCTURE
+
+Organize the code cleanly.
+
+Recommended architecture:
+
+```text
+src/
+│
+├── components/
+│   ├── MainMenu
+│   ├── HUD
+│   ├── PauseMenu
+│   ├── LevelSelect
+│   └── GameOver
+│
+├── game/
+│   ├── GameEngine
+│   ├── Player
+│   ├── Enemy
+│   ├── Projectile
+│   ├── ParticleSystem
+│   ├── CollisionSystem
+│   ├── SpawnManager
+│   ├── WaveManager
+│   ├── BossManager
+│   └── AudioManager
+│
+├── assets/
+│
+├── styles/
+│
+└── main.jsx
+```
+
+Use a clean separation between:
+
+- Rendering
+- Game logic
+- Input
+- Audio
+- UI
+- State
+- Persistence
+
+---
+
+# 44. FINAL DELIVERABLE
+
+Provide a complete working project.
+
+The final response must include:
+
+### 1. Complete source code
+
+All required files.
+
+### 2. Folder structure
+
+Clearly show:
+
+```text
+dino-freeze-blast/
+```
+
+### 3. Installation instructions
+
+For example:
+
+```bash
+npm install
+npm run dev
+```
+
+### 4. Production build
+
+```bash
+npm run build
+```
+
+### 5. Netlify deployment instructions
+
+Explain exactly how to deploy the project using:
+
+- Netlify drag & drop
+OR
+- Netlify Git deployment
+
+### 6. Netlify settings
+
+If applicable:
+
+```text
+Build command:
+npm run build
+
+Publish directory:
+dist
+```
+
+### 7. Optional standalone version
+
+If practical, also generate:
+
+```text
+index.html
+```
+
+that runs without a build process.
+
+---
+
+# 45. MOST IMPORTANT QUALITY RULE
+
+Do NOT interpret this as a simple coding exercise.
+
+The goal is to create something that, when opened in a browser, makes a child say:
+
+> "Wow! I want to play this!"
+
+Prioritize:
+
+**Fun + Game Feel + Visual Quality + Smooth Animation + Sound + Feedback + Kid-Friendly Design + Replayability**
+
+over minimizing the number of files.
+
+If there is a conflict between:
+
+**single-file simplicity**
+
+and
+
+**professional game quality**
+
+choose **professional game quality**, while still ensuring that the final project is straightforward to deploy on Netlify.
+
+Before considering the project complete, test every major gameplay loop:
+
+**Aim → Shoot → Hit → Freeze → Full Freeze → Shatter → Score → Combo → Power-up → Wave → Boss → Level Complete → Unlock → Replay**
+
+All of these should actually work.
