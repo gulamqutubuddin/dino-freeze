@@ -103,6 +103,17 @@ export class GameEngine {
     this.dpr = dpr;
     this.scale = Math.min(c.height / 720, c.width / 960);
     this.W = c.width / this.scale; this.H = c.height / this.scale;
+    // ---- responsive creature sizing ----
+    // In portrait the world is locked to 960 units wide, so creatures shrink a
+    // lot on phones. Boost them based on aspect ratio and physical screen size.
+    const aspect = this.H / this.W;
+    let k = 1.2; // global base boost (creatures were a bit small everywhere)
+    if (aspect > 1) k *= clamp(1 + (aspect - 1) * 0.4, 1, 1.45); // portrait phones / tablets
+    if (Math.min(cssW, cssH) < 500) k *= 1.1; // small physical screens (landscape phones too)
+    this.enemyScale = k;
+    this.altScale = Math.max(1, k * 0.85); // keep flyers clear of the ground when bigger
+    this.farScale = aspect > 1 ? 0.42 : 0.34; // far-away creatures not too tiny on mobile
+    this.laneSpread = aspect > 1.3 ? 0.88 : 1; // keep big creatures inside narrow screens
     this.hy = this.H * HORIZON;
     this.nearY = this.H - 150;
     this.cx = this.W / 2; this.cy = this.H - 58;
@@ -610,10 +621,11 @@ export class GameEngine {
     const z = clamp(e.z, 0, 1.05);
     const zz = z * z * 0.45 + z * 0.55;
     e.gy = this.hy + (this.nearY - this.hy) * zz;
-    e.s = 0.3 + 0.8 * zz;
-    e.sx = this.cx + e.x * (this.W * 0.14 + this.W * 0.34 * zz);
-    e.sc = e.s * e.type.size * 0.85;
-    e.sy = e.gy - e.alt * e.s;
+    const far = this.farScale || 0.3;
+    e.s = far + (1.1 - far) * zz;
+    e.sx = this.cx + e.x * (this.W * 0.14 + this.W * 0.34 * zz) * (this.laneSpread || 1);
+    e.sc = e.s * e.type.size * 0.85 * (this.enemyScale || 1);
+    e.sy = e.gy - e.alt * e.s * (this.altScale || 1);
   }
 
   updateEnemies(dt) {
